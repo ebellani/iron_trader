@@ -1,0 +1,33 @@
+﻿<Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <NoWarn>NU1701, NU1602</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FscToolPath>./</FscToolPath>
+    <FscToolExe>fsharpc.exe</FscToolExe>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- this file order contains modules from inner to outer levels
+         of abstraction. -->
+    <Compile Include="DomainTypes.fs" />
+    <Compile Include="BlinktradeApiTypes.fs" />
+    <Compile Include="BlinktradeApi.fs" />
+    <Compile Include="Ledger.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Argu" Version="3.7.0" />
+    <PackageReference Include="FSharp.Compiler.Tools" Version="4.1.23" />
+    <PackageReference Include="FSharp.Core" Version="4.1.*" />
+    <PackageReference Include="FSharp.Data" Version="2.3.3" />
+    <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
+    <PackageReference Include="FSharpx.Collections" Version="1.17.0" />
+    <PackageReference Include="FSharpx.Extras" Version="2.2.1" />
+    <PackageReference Include="Hopac" Version="0.3.23" />
+    <PackageReference Include="Logary" Version="4.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="System.Net.Http" Version="4.3.2" />
+  </ItemGroup>
+</Project>

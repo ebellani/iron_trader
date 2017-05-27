@@ -1,0 +1,2 @@
+#!/bin/sh
+fsharpc  --warnon:1182 --nowarn:0203 "$@"
